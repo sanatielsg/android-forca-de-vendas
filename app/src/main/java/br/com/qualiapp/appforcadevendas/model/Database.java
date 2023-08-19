@@ -119,6 +119,19 @@ public class Database extends SQLiteOpenHelper {
                 "CONF_ENVIADO                 CHAR(1)" +
                 ")");
 
+        db.execSQL("CREATE TABLE HISTPAGAMENTO(" +
+                "HIST_CODIGO             INTEGER," +
+                "HIST_NUMERO_PARCELA     INTEGER," +
+                "HIST_VALOR_REAL_PARCELA DECIMAL(10,2)," +
+                "HIST_VALOR_PAGO_NO_DIA  DECIMAL(10,2)," +
+                "HIST_RESTANTE_A_PAGAR   DECIMAL(10,2)," +
+                "HIST_DATA_PAGAMENTO     DATE," +
+                "HIST_NOME_CLIENTE       VARCHAR(30)," +
+                "HIST_COMO_PAGOU         VARCHAR(20)," +
+                "VENDAC_CHAVE            VARCHAR(70)," +
+                "HIST_ENVIADO            CHAR(1)" +
+                ")");
+
     }
 
     @Override
