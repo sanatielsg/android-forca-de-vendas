@@ -78,6 +78,22 @@ public class Database extends SQLiteOpenHelper {
                 "VENDAD_TOTAL         DECIMAL(10,2)" +
                 ")");
 
+        db.execSQL("CREATE TABLE CHEQUE(" +
+                "CH_CODIGO        INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "CH_CLI_CODIGO    INTEGER," +
+                "CH_NUMERO_CHEQUE VARCHAR(20)," +
+                "CH_CONTATO       VARCHAR(20)," +
+                "CH_CPF_DONO      VARCHAR(50)," +
+                "CH_NOME_DONO     VARCHAR(50)," +
+                "CH_NOME_BANCO    VARCHAR(50)," +
+                "CH_VENCIMENTO    DATE," +
+                "CH_VALOR_CHEQUE  DECIMAL(10,2)," +
+                "CH_TERCEIRO      CHAR(1)," +
+                "VENDAC_CHAVE     VARCHAR(70)," +
+                "CH_ENVIADO       VARCHAR(1)," +
+                "CH_DATA_CADASTRO DATE" +
+                ")");
+
     }
 
     @Override
