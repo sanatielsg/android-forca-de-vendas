@@ -10,6 +10,15 @@ public class Database extends SQLiteOpenHelper {
     private static final String DB = "banco.db";
     private static final int VERSION = 1;
 
+    private static Database db;
+
+    public static Database getInstance(Context context){
+        if (db == null){
+            db = new Database(context);
+        }
+        return db;
+    }
+
     public Database(@Nullable Context context) {
         super(context, DB, null, VERSION);
     }
