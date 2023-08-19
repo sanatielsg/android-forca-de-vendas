@@ -94,6 +94,20 @@ public class Database extends SQLiteOpenHelper {
                 "CH_DATA_CADASTRO DATE" +
                 ")");
 
+        db.execSQL("CREATE TABLE CONREC(" +
+                "REC_CODIGO          INTEGER," +
+                "REC_NUM_PARCELA     INTEGER," +
+                "REC_CLI_CODIGO      INTEGER," +
+                "REC_CLI_NOME        VARCHAR(50)," +
+                "VENDAC_CHAVE        VARCHAR(70)," +
+                "REC_DATA_MOVIMENTO  DATE," +
+                "REC_VALOR_RECEBER   DECIMAL(10,2)," +
+                "REC_DATA_VENCIMENTO DATE," +
+                "REC_DATA_QUE_PAGOU  DATE," +
+                "REC_RECEBEU_COM     VARCHAR(20)," +
+                "REC_ENVIADO         CHAR(1)" +
+                ")");
+
     }
 
     @Override
