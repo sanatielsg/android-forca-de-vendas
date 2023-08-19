@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnTeste = findViewById(R.id.btn_teste);
+        //btnTeste = findViewById(R.id.btn_teste);
 
         btnTeste.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 p.setpTrabalharComEstoqueNegativo("S");
                 p.setpEndIPLocal("http://192.168.3.100/AppVendas");
                 p.setpEndIPRemoto("http://appvendas.qualiapp.com.br");
-
+                p.setpUsuario("vendedor1");
+                p.setpSenha("123");
                 dao.insert(p);
 
             }
