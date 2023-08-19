@@ -13,20 +13,21 @@
         android:orientation="vertical"
         >
         <EditText
-            android:id="@+id/btn_usuario_registrar"
+            android:id="@+id/edt_usuario_registrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Usuário"
             />
 
         <EditText
-            android:id="@+id/btn_senha_registrar"
+            android:id="@+id/edt_senha_registrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Senha"
             />
 
         <Button
+            android:id="@+id/btn_registrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Registrar Vendedor"
