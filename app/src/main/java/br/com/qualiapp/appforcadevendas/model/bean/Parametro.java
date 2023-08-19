@@ -8,6 +8,25 @@ public class Parametro {
     private String pTrabalharComEstoqueNegativo;
     private int pDescontoDoVendedor;
 
+    private String pUsuario;
+    private String pSenha;
+
+    public String getpUsuario() {
+        return pUsuario;
+    }
+
+    public void setpUsuario(String pUsuario) {
+        this.pUsuario = pUsuario;
+    }
+
+    public String getpSenha() {
+        return pSenha;
+    }
+
+    public void setpSenha(String pSenha) {
+        this.pSenha = pSenha;
+    }
+
     public int getpUsuCodigo() {
         return pUsuCodigo;
     }

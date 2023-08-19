@@ -21,6 +21,8 @@ public class ParametroDAO {
         ContentValues values = new ContentValues();
         values.put("P_USU_CODIGO", parametro.getpUsuCodigo());
         values.put("P_IMPORTAR_CLIENTE", parametro.getpImportarCliente());
+        values.put("P_USUARIO", parametro.getpUsuario());
+        values.put("P_SENHA", parametro.getpSenha());
         values.put("P_END_IP_LOCAL", parametro.getpEndIPLocal());
         values.put("P_END_IP_REMOTO", parametro.getpEndIPRemoto());
         values.put("P_TRABALHAR_COM_ESTOQUE_NEGATIVO", parametro.getpTrabalharComEstoqueNegativo());
