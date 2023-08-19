@@ -57,10 +57,19 @@ public class Database extends SQLiteOpenHelper {
                 "VENDAC_LATITUDE        DOUBLE," +
                 "VENDAC_LONGITUDE       DOUBLE" +
                 ")");
-        
+
         db.execSQL("CREATE TABLE VENDAD(" +
                 "VENDAC_CHAVE         VARCHAR(70)," +
                 "VENDAD_NRO_ITEM      INTEGER," +
+                "VENDAD_EAN           VARCHAR(50)," +
+                "VENDAD_PRD_CODIGO    INTEGER," +
+                "VENDAD_PRD_DESCRICAO VARCHAR(50)," +
+                "VENDAD_QUANTIDADE    DECIMAL(10,2)," +
+                "VENDAD_PRECO_VENDA   DECIMAL(10,2)," +
+                "VENDAD_TOTAL         DECIMAL(10,2)" +
+                ")");
+
+        db.execSQL("CREATE TABLE VENDAD_TEMP(" +
                 "VENDAD_EAN           VARCHAR(50)," +
                 "VENDAD_PRD_CODIGO    INTEGER," +
                 "VENDAD_PRD_DESCRICAO VARCHAR(50)," +
