@@ -108,6 +108,17 @@ public class Database extends SQLiteOpenHelper {
                 "REC_ENVIADO         CHAR(1)" +
                 ")");
 
+        db.execSQL("CREATE TABLE CONFPAGAMENTO(" +
+                "CONF_CODIGO                  INTEGER," +
+                "CONF_SEM_ENTRADA_COM_ENTRADA CHAR(1)," +
+                "CONF_TIPO_PAGAMENTO          VARCHAR(20)," +
+                "CONF_RECEBER_COM_DIN_CH_CAR  VARCHAR(20)," +
+                "CONF_VALOR_RECEBIDO          DECIMAL(10,2)," +
+                "CONF_PARCELAS                INTEGER," +
+                "VENDAC_CHAVE                 VARCHAR(70)," +
+                "CONF_ENVIADO                 CHAR(1)" +
+                ")");
+
     }
 
     @Override
