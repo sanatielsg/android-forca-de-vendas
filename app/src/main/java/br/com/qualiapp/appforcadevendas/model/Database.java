@@ -33,6 +33,16 @@ public class Database extends SQLiteOpenHelper {
                 "CLI_CHAVE          VARCHAR(100)" +
                 ")");
 
+        db.execSQL("CREATE TABLE PRODUTO(" +
+                "PRD_CODIGO    INTEGER," +
+                "PRD_EAN13     VARCHAR(13)," +
+                "PRD_DESCRICAO VARCHAR(50)," +
+                "PRD_UNMEDIDA  VARCHAR(10)," +
+                "PRD_CUSTO     DECIMAL(10,2)," +
+                "PRD_PRECO     DECIMAL(10,2)," +
+                "PRD_CATEGORIA VARCHAR(30)" +
+                ")");
+
     }
 
     @Override
