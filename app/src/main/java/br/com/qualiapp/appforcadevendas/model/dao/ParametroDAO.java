@@ -11,7 +11,7 @@ public class ParametroDAO {
     private Context context;
     private Database database;
 
-    private ParametroDAO(Context context){
+    public ParametroDAO(Context context){
         this.context = context;
         database = Database.getInstance(context);
     }
