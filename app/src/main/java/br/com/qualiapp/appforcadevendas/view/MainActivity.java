@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
         requestQueue = Volley.newRequestQueue(MainActivity.this);
 
-
         btnRegistrar.setOnClickListener(v -> {
             if (Util.checarConexao(getBaseContext())){
 
