@@ -43,6 +43,21 @@ public class Database extends SQLiteOpenHelper {
                 "PRD_CATEGORIA VARCHAR(30)" +
                 ")");
 
+        db.execSQL("CREATE TABLE VENDAC(" +
+                "VENDAC_ID              INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "VENDAC_CHAVE           VARCHAR(70)," +
+                "VENDAC_DATAHORAVENDA   DATETIME," +
+                "VENDAC_PREVISAOENTREGA DATE," +
+                "VENDAC_USU_CODIGO      INTEGER," +
+                "VENDAC_USU_NOME        VARCHAR," +
+                "VENDAC_FORMA_PAGAMENTO VARCHAR(50)," +
+                "VENDAC_VALOR           DECIMAL(10,2)," +
+                "VENDAC_PESO_TOTAL      DECIMAL(10,2)," +
+                "VENDAC_ENVIADA         CHAR(1)," +
+                "VENDAC_LATITUDE        DOUBLE," +
+                "VENDAC_LONGITUDE       DOUBLE" +
+                ")");
+
     }
 
     @Override
