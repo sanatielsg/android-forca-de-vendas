@@ -132,6 +132,14 @@ public class Database extends SQLiteOpenHelper {
                 "HIST_ENVIADO            CHAR(1)" +
                 ")");
 
+        db.execSQL("CREATE TABLE PARAMETRO(" +
+                "P_USU_CODIGO                     INTEGER," +
+                "P_IMPORTAR_CLIENTE               VARCHAR(20)," +
+                "P_END_IP_LOCAL                   VARCHAR(50)," +
+                "P_END_IP_REMOTO                  VARCHAR(50)," +
+                "P_TRABALHAR_COM_ESTOQUE_NEGATIVO CHAR(1)," +
+                "P_DESCONTO_DO_VENDEDOR           INTEGER" +
+                ")");
     }
 
     @Override
