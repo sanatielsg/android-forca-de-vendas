@@ -1,8 +1,12 @@
 package br.com.qualiapp.appforcadevendas.model.dao;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import java.sql.PreparedStatement;
 
 import br.com.qualiapp.appforcadevendas.model.Database;
 import br.com.qualiapp.appforcadevendas.model.bean.Parametro;
@@ -30,6 +34,25 @@ public class ParametroDAO {
         return db.insert("PARAMETRO",null, values);
     }
 
-
-
+    @SuppressLint("Range")
+    public Parametro get() {
+        Parametro parametro = null;
+        SQLiteDatabase db = database.getReadableDatabase();
+        String sql = "SELECT * FROM PARAMETRO";
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+        if (cursor.getCount() > 0 ){
+            parametro = new Parametro();
+            parametro.setpUsuCodigo(cursor.getInt(cursor.getColumnIndex("P_USU_CODIGO")));
+            parametro.setpImportarCliente(cursor.getString(cursor.getColumnIndex("P_IMPORTAR_CLIENTE")));
+            parametro.setpUsuario(cursor.getString(cursor.getColumnIndex("P_USUARIO")));
+            parametro.setpSenha(cursor.getString(cursor.getColumnIndex("P_SENHA")));
+            parametro.setpEndIPLocal(cursor.getString(cursor.getColumnIndex("P_END_IP_LOCAL")));
+            parametro.setpEndIPRemoto(cursor.getString(cursor.getColumnIndex("P_END_IP_REMOTO")));
+            parametro.setpTrabalharComEstoqueNegativo(cursor.getString(cursor
+                    .getColumnIndex("P_TRABALHAR_COM_ESTOQUE_NEGATIVO")));
+            parametro.setpDescontoDoVendedor(cursor.getInt(cursor.getColumnIndex("P_DESCONTO_DO_VENDEDOR")));
+        }
+       return  parametro;
+    }
 }
