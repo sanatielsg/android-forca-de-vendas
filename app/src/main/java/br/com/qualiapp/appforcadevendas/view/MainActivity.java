@@ -26,6 +26,7 @@ import br.com.qualiapp.appforcadevendas.json.CustomJsonObjectRequest;
 import br.com.qualiapp.appforcadevendas.model.bean.Parametro;
 import br.com.qualiapp.appforcadevendas.model.dao.ParametroDAO;
 import br.com.qualiapp.appforcadevendas.util.Util;
+import br.com.qualiapp.appforcadevendas.web.Web;
 
 public class MainActivity extends AppCompatActivity {
     private EditText edtUsuario;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private RequestQueue requestQueue;
     private static final String TAG_SUCESSO = "sucesso";
     private static final String TAG_MENSAGEM = "mensagem";
-    private Map<String, String> params;
+    private Web web;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,17 +91,8 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private void registrarUsuarioWeb(String usuario, String senha) {
-        int method = Request.Method.POST;
-        String url = "http://192.168.3.100/AppVendas";
-        JSONObject jsonRequest = null;
-        Response.Listener<JSONObject> listener = null;
-        Response.ErrorListener errorListener = null;
-
-        params = new HashMap<String, String>();
-        params.put("usuario",usuario);
-        params.put("senha", senha);
-        CustomJsonObjectRequest request = new CustomJsonObjectRequest(method, url, jsonRequest, listener, errorListener);
+    private void registrarUsuarioWeb(String usuario, String senha){
+        web.registrarUsuarioWeb(usuario, senha);
     }
 
     public void testar(){
