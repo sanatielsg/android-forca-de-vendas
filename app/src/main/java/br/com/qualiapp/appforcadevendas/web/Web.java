@@ -12,11 +12,6 @@ import br.com.qualiapp.appforcadevendas.json.CustomJsonObjectRequest;
 
 public class Web {
     private Map<String, String> params;
-
-    public Web(Map<String, String> params){
-        this.params = params;
-    }
-
     public void registrarUsuarioWeb(String usuario, String senha) {
         int method = Request.Method.POST;
         String url = "http://192.168.3.100/AppVendas";
